@@ -41,7 +41,7 @@ if image is not None:
 		model="gpt-3.5-turbo",
 		messages=[
 		#{"role": "system", "content": "You are a helpful assistant."},
-		{"role": "user", "content": f"Write a mix of quirky, funny, and actual music lyrics captions for a social media post. Keep the captions a mix of long and one-to-three-word short ones for the image with {orig_caption}. Suggest a mix of all the types in 10  captions"}
+		{"role": "user", "content": f"Write a mix of quirky, funny, and actual music lyrics captions for a social media post. Keep the captions a mix of long and one-to-three-word short ones for the image with {orig_caption}. Suggest a mix of all the types and give 10 top captions"}
 		]
 		)
 		st.write("Here are some quirky captions for your image")
