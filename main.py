@@ -23,8 +23,8 @@ image = st.file_uploader("Upload your image", type=["png", "jpg", "jpeg"], accep
 
 # Checking Image 
 if image is not None:
+	col1,col2,col3 = st.columns([0.25,0.5,0.25])
 	try:
-		col1,col2,col3 = st.columns([0.25,0.5,0.25])
 		with col2:
 			st.image(image, "Uploaded Image", width = 300)
 		workflow = Workflow("https://clarifai.com/gvibhor/first_testing_app/workflows/blip_2")
@@ -48,7 +48,7 @@ if image is not None:
 			st.write("Here are some quirky captions for your image")
 			captions = st.write(completion.choices[0].message["content"])
 	except:
-		st.markdown("<h5 style='color:#D0312D'> Backend Error, Refresh and Try Again</h5>",unsafe_allow_html=True)
+		st.markdown("<h5 style='color:burgundy'> Backend Error, Refresh and Try Again</h5>",unsafe_allow_html=True)
 else:
 	st.markdown("<h4 style='color:tomato'> No Image Uploaded, No Caption</h4>",unsafe_allow_html=True)
 
