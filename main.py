@@ -46,7 +46,7 @@ if image is not None:
 			]
 			)
 			st.write("Here are some quirky captions for your image")
-			captions = st.write(completion.choices[0].message["content
+			captions = st.write(completion.choices[0].message["content"])
 	except:
 		st.markdown("<h5 style='color:#D0312D'> Backend Error, Refresh and Try Again</h5>",unsafe_allow_html=True)
 else:
